@@ -21,7 +21,7 @@ const server_start = function( callback )
 
 const watch_stylesheet = function( callback )
 {
-	const watchlist = [ "styles.css" ];
+	const watchlist = [ "**/*.css" ];
 	gulp.watch( watchlist , function resync_stylesheet( callback ){ browsersync.reload( watchlist ); callback(); } );
 	callback();
 }
@@ -30,7 +30,7 @@ const watch_stylesheet = function( callback )
 
 const watch_scripts = function( callback )
 {
-	const watchlist = [ "scripts.js" ];
+	const watchlist = [ "**/*.js" ];
 	gulp.watch( watchlist , function resync_scripts( callback ){ browsersync.reload( watchlist ); callback(); } );
 	callback();
 }
@@ -39,7 +39,7 @@ const watch_scripts = function( callback )
 
 const watch_html = function( callback )
 {
-	const watchlist = [ "index.html" ];
+	const watchlist = [ "**/*.html" ];
 	gulp.watch( watchlist , function resync_html( callback ){ browsersync.reload( watchlist ); callback(); } );
 	callback();
 }
